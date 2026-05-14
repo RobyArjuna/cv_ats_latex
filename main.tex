@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- PACKAGES ---
+\usepackage[a4paper,margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{xcolor}
+
+% --- ATS OPTIMIZATION ---
+\input{glyphtounicode}
+\pdfgentounicode=1
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+
+% --- CUSTOM STYLING ---
+\definecolor{primary}{HTML}{2E3440} % Professional Dark Grey
+\definecolor{accent}{HTML}{4C566A}  % Subdued accent
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% List formatting
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, itemsep=2pt, parsep=0pt}
+
+% Command for resume entries
+\newcommand{\resumeEntry}[4]{%
+  {\textbf{\color{primary}#1}} \hfill #2\\
+  {\textit{\color{accent}#3}} \hfill {\textit{\color{accent}#4}}
+}
+
+% --- PERSONAL INFO ---
+\newcommand{\cvname}{ROBY ARJUNA WIJAYA}
+\newcommand{\cvrole}{Mobile Developer}
+\newcommand{\cvlocation}{Surabaya, East Java, Indonesia}
+\newcommand{\cvemail}{robiarjunawijaya@gmail.com}
+\newcommand{\cvwebsite}{robyarjuna.my.id}
+\newcommand{\cvphone}{+6285848454128}
+\newcommand{\cvgpa}{3.56/4.00}
+\newcommand{\cvuniversity}{Electronic Engineering Polytechnic Institute of Surabaya}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\LARGE \textbf{\color{primary}\cvname}}\\
+    \vspace{2pt}
+    {\large \color{accent}\cvrole}\\
+    \vspace{4pt}
+    \small
+    \cvlocation \;$\cdot$\; 
+    \href{mailto:\cvemail}{\cvemail} \;$\cdot$\; 
+    \href{https://\cvwebsite/}{\cvwebsite} \;$\cdot$\; 
+    \cvphone
+\end{center}
+
+% --- SUMMARY ---
+\section*{Professional Summary}
+Mobile Developer and final-year Applied Informatics Engineering student with hands-on experience building Flutter applications using Riverpod and GetX. Experienced in developing real-time monitoring features, integrating REST APIs, Firebase Cloud Messaging, Google Authentication, and Midtrans payment gateway. Backend-aware developer with Laravel and REST API experience, enabling effective collaboration across mobile and backend teams to build reliable, maintainable, and user-focused applications.
+
+% --- EXPERTISE ---
+\section*{Area of Expertise}
+Mobile Development \;$\cdot$\; Backend Developer \;$\cdot$\; Frontend Developer \;$\cdot$\; Quality Assurance \;$\cdot$\; Responsive App \;$\cdot$\; UI/UX Design
+
+% --- SKILLS ---
+\section*{Technical Skills}
+\begin{itemize}
+    \item \textbf{Mobile Development:} Flutter, Dart, Riverpod, GetX, State Management, Responsive Mobile UI
+    \item \textbf{API \& Integration:} REST API Integration, JWT Authentication, Firebase Cloud Messaging, Google Authentication, Midtrans Payment Gateway
+    \item \textbf{Backend Understanding:} Laravel, PHP, MVC Architecture, REST API Development
+    \item \textbf{Database:} MySQL, PostgreSQL, Database Design, Query Optimization
+    \item \textbf{Tools \& Cloud:} Git, Docker, AWS EC2, AWS RDS, AWS S3
+\end{itemize}
+
+% --- EXPERIENCE ---
+\section*{Professional Experience}
+
+\resumeEntry{Mobile Developer}{Jan 2026 -- Present}{PT Tako Anugerah Korporasi}{Surabaya, East Java}
+\begin{itemize}
+    \item Developed and maintained Tako Apps, a mobile employee self-service application for attendance, leave requests, permission requests, and overtime management.
+    \item Built mobile features using Flutter with Riverpod state management to ensure scalable, maintainable, and reactive application architecture.
+    \item Integrated mobile application features with backend REST APIs to support employee attendance, leave, permission, and overtime workflows.
+    \item Implemented efficient state management and API handling to improve data consistency and user experience across HR-related modules.
+    \item Prepared and managed mobile app deployment processes for Google Play Store and Apple App Store.
+    \item Collaborated with backend and product teams to align mobile features with internal HR business processes and user requirements.
+\end{itemize}
+
+\resumeEntry{Mobile Developer Intern}{Jun 2025 -- Dec 2025}{PT Pompa Dex Indoguna}{Surabaya, East Java}
+\begin{itemize}
+    \item Developed Flutter-based mobile applications for flood pump monitoring and early childhood class registration using Riverpod and GetX.
+    \item Built real-time monitoring features for pump status, device activity, and live operational updates through backend API integration.
+    \item Optimized Riverpod state management to reduce unnecessary widget rebuilds and improve data retrieval efficiency.
+    \item Implemented Google Authentication and Firebase Cloud Messaging for authentication and real-time notification flows.
+    \item Integrated Midtrans payment gateway, including transaction initiation and payment status validation through backend APIs.
+    \item Prepared and managed deployment processes for FloodViser and Sparkling to Google Play Store and Apple App Store.
+    \item Collaborated with a 9-member team to deliver mobile features aligned with operational and user requirements.
+\end{itemize}
+
+\resumeEntry{Web Developer Intern}{Jan 2025 -- Jun 2025}{PT Meetaza Prawira Media}{Sleman, Yogyakarta}
+\begin{itemize}
+    \item Developed and maintained backend features and REST APIs for a client-facing e-commerce platform using Laravel.
+    \item Implemented API endpoints and business logic to support frontend features built with React and Next.js.
+    \item Optimized database queries and improved application performance.
+    \item Collaborated in an Agile/Scrum team to deliver product milestones on schedule.
+\end{itemize}
+
+% --- PROJECTS ---
+\section*{Selected Projects \& Portfolio}
+\begin{itemize}
+    \item \textbf{FloodViser (Mobile, Flutter/Riverpod):} Internship project at PT Pompa Dex Indoguna.
+    \item \textbf{Sparkling (Mobile, Flutter/GetX + Midtrans + FCM):} Internship project at PT Pompa Dex Indoguna.
+    \item \textbf{PENS TOEFL App (Flutter):} \url{https://github.com/jhiven/toefl_app.git}
+    \item \textbf{Mealty App (Flutter/Riverpod):} \url{https://github.com/agilepdbl/2024mobile-widget-beranda.git}
+    \item \textbf{Mealty Web (React + Laravel):} \url{https://github.com/agilepdbl/2024website-widget-beranda.git}
+    \item \textbf{Si-Sabi (Next.js, Bank Indonesia Jatim):} \url{https://github.com/daffaazhar/si-sabi}
+    \item \textbf{Kammari (Full Stack Laravel):} \url{https://github.com/RobyArjuna/kammari-project}
+\end{itemize}
+
+% --- EDUCATION ---
+\section*{Education}
+\resumeEntry{Bachelor of Applied Informatics Engineering}{Jul 2022 -- Present}{\cvuniversity}{GPA: \cvgpa}
+
+% --- LEADERSHIP ---
+\section*{Leadership \& Organizational Experience}
+\begin{itemize}
+    \item Head of Creative Economy Division - GENBI PENS (Jun 2024 -- Feb 2025)
+    \item Expert Staff, Department of Internal Affairs - Student Association of Informatics Engineering and Data Science (Oct 2024 -- Present)
+    \item Election Commission - HIMIT General Election PENS (Dec 2022 -- Mar 2023)
+\end{itemize}
+
+% --- ADDITIONAL ---
+\section*{Additional Information}
+\begin{itemize}
+    \item \textbf{Public Speaking Competency Certification} \hfill 2024 \\
+    \textit{Badan Nasional Sertifikasi Profesi (BNSP)}
+    
+    \item \textbf{Quality Assurance Certification} \hfill 2024 \\
+    \textit{Badan Nasional Sertifikasi Profesi (BNSP)}
+    
+    \item \textbf{Bank Indonesia Scholarship Awardee (GenBI)} \hfill 2023 -- 2025 \\
+    \textit{Bank Indonesia}
+    
+    \item \textbf{Languages:} Indonesian (Native), English (Professional Working Proficiency)
+\end{itemize}
+
+\end{document}

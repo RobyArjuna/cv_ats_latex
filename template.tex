@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article} % Increased font size for better readability
+
+% --- PACKAGES ---
+\usepackage[a4paper,margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{xcolor}
+
+% --- ATS OPTIMIZATION ---
+\input{glyphtounicode}
+\pdfgentounicode=1
+\hypersetup{pageanchor=false}
+\pagenumbering{gobble}
+
+% --- CUSTOM STYLING ---
+\definecolor{primary}{HTML}{2E3440} % Professional Dark Grey
+\definecolor{accent}{HTML}{4C566A}  % Subdued accent
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% List formatting
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, itemsep=2pt, parsep=0pt}
+
+% Command for resume entries
+\newcommand{\resumeEntry}[4]{%
+  {\textbf{\color{primary}#1}} \hfill #2\\
+  {\textit{\color{accent}#3}} \hfill {\textit{\color{accent}#4}}
+}
+
+% --- PERSONAL INFO (Fill this part) ---
+\newcommand{\cvname}{[YOUR FULL NAME]}
+\newcommand{\cvrole}{[YOUR TARGET JOB TITLE]}
+\newcommand{\cvlocation}{[City, Country]}
+\newcommand{\cvemail}{[your.email@example.com]}
+\newcommand{\cvwebsite}{[yourportfolio.com]}
+\newcommand{\cvgithub}{[github.com/yourusername]}
+\newcommand{\cvphone}{[+00 000 0000 000]}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\LARGE \textbf{\color{primary}\cvname}}\\
+    \vspace{2pt}
+    {\large \color{accent}\cvrole}\\
+    \vspace{4pt}
+    \small
+    \cvlocation \;$\cdot$\; 
+    \href{mailto:\cvemail}{\cvemail} \;$\cdot$\; 
+    \href{https://\cvwebsite}{\cvwebsite} \;$\cdot$\; 
+    \href{https://\cvgithub}{\cvgithub} \;$\cdot$\; 
+    \cvphone
+\end{center}
+
+% --- SUMMARY ---
+\section*{Professional Summary}
+A results-driven [Your Role] with [Number] years of experience specializing in [Key Skill 1] and [Key Skill 2]. Proven track record of delivering [Major Achievement] and optimizing [Key Process]. Passionate about [Industry Interest] and building scalable, user-centric solutions.
+
+% --- EXPERTISE ---
+\section*{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages \& Frameworks:} [Skill 1, Skill 2, Skill 3, Skill 4]
+    \item \textbf{Tools \& Technologies:} [Tool 1, Tool 2, Tool 3, Tool 4]
+    \item \textbf{Other Expertise:} [Domain 1, Domain 2, Domain 3]
+\end{itemize}
+
+% --- EXPERIENCE ---
+\section*{Professional Experience}
+
+\resumeEntry{[Job Title]}{[Month Year] -- [Present]}{[Company Name]}{[Location]}
+\begin{itemize}
+    \item Led the development of [Project/Feature], resulting in a [Percentage]\% increase in [Metric].
+    \item Collaborated with cross-functional teams to define requirements and implement [New System].
+    \item Mentored junior developers and established best practices for [Workflow/Code Quality].
+\end{itemize}
+
+\resumeEntry{[Previous Job Title]}{[Month Year] -- [Month Year]}{[Company Name]}{[Location]}
+\begin{itemize}
+    \item Optimized [System/Process] performance, reducing latency by [Time/Percentage].
+    \item Integrated [Third-party API/Service] to enhance [Feature/Capability].
+    \item Authored technical documentation and improved onboarding efficiency.
+\end{itemize}
+
+% --- PROJECTS ---
+\section*{Key Projects}
+\begin{itemize}
+    \item \textbf{[Project Name]} | \textit{[Technologies Used]} \newline
+    [One-line description of the project and your specific contribution.] \href{https://github.com/user/repo}{[GitHub]}
+    
+    \item \textbf{[Another Project]} | \textit{[Technologies Used]} \newline
+    [One-line description of the impact or uniqueness of the project.] \href{https://github.com/user/repo}{[Link]}
+\end{itemize}
+
+% --- EDUCATION ---
+\section*{Education}
+\resumeEntry{[Degree Name]}{[Month Year] -- [Month Year]}{[University Name]}{[GPA: X.X/4.0]}
+
+% --- CERTIFICATIONS ---
+\section*{Certifications \& Awards}
+\begin{itemize}
+    \item \textbf{[Certification Name]} \hfill [Year] \\
+    \textit{[Issuing Organization]}
+    
+    \item \textbf{[Award/Scholarship Name]} \hfill [Year] \\
+    \textit{[Organization]}
+\end{itemize}
+
+\end{document}
