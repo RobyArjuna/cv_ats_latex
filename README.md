@@ -24,9 +24,9 @@ You'll need a LaTeX distribution (MiKTeX, TeX Live) or just use [Overleaf](https
 ### 2. Personalize
 Edit `main.tex` and fill in your details:
 ```latex
-\newcommand{\cvname}{ROBY ARJUNA}
-\newcommand{\cvrole}{Mobile Developer}
-\newcommand{\cvemail}{hello@robyarjuna.com}
+\newcommand{\cvname}{Alexander Isaac}
+\newcommand{\cvrole}{Data Scientist}
+\newcommand{\cvemail}{[EMAIL_ADDRESS]}
 ```
 
 ### 3. Compile
